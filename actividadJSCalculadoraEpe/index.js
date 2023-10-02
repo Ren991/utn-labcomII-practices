@@ -5,7 +5,7 @@ function validarDatos() {
     var zonaDomicilio = document.getElementById("zona-domicilio");
     var valorZonaSeleccionado = zonaDomicilio.value;
 
-        console.log("hola")
+        
     //VALIDACION TIPO USUARIO
     if (tipoUsuarioResidencial.checked) {
 
@@ -46,8 +46,7 @@ function changeKwh() {
 }
 
 function calcularFactura(valorZonaSeleccionado, tipoUsuario) {
-    console.log(valorZonaSeleccionado)
-    console.log(tipoUsuario)
+   
     var containerMsg = document.getElementById("msjExito");
 
     const costoDeServicio = 102
@@ -74,7 +73,7 @@ function calcularFactura(valorZonaSeleccionado, tipoUsuario) {
         default:
             break;
     }
-    console.log(costoSegunZona);
+    
 
     if (tipoUsuario === "industrial") {
         ivaSegunUsuario = 27
@@ -84,7 +83,7 @@ function calcularFactura(valorZonaSeleccionado, tipoUsuario) {
 
     cuentaFinal = parseFloat(costoDeServicio) * (parseFloat(valorKwh) * costoSegunZona) * (1 + parseFloat(ivaSegunUsuario))
 
-    console.log(cuentaFinal);
+    
 
 
     Swal.fire({
