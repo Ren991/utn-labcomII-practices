@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Facturación Eléctrica</title>
+    <link rel="stylesheet" type="text/css" href="style.css"> <!-- Vincula tu archivo CSS aquí -->
+</head>
+<body>
+    <div class="container">
+        <div id="msjExito">
+
+        </div>
+        <h1>Calculadora de Facturación Eléctrica</h1>
+        <form  >
+            <label for="tipo-usuario">Tipo de Usuario:</label><br>
+            <label for="residencial">Residencial (IVA 21%)</label><br>
+            <input type="radio" id="residencial" name="tipo-usuario" value="residencial">
+            <label for="industrial">Industrial (IVA 27%)</label><br>
+            <input type="radio" id="industrial" name="tipo-usuario" value="industrial"><br><br>
+            
+
+            <label for="zona-domicilio">Zona del Domicilio:</label><br>
+            <select id="zona-domicilio" name="zona-domicilio">
+                <option value="s" >Seleccione una opcion</option>
+                <option value="centro">Distrito Centro ($5.80 por kWh)</option>
+                <option value="zur">Distrito Zur ($5.40 por kWh)</option>
+                <option value="oeste">Distrito Oeste ($5.35 por kWh)</option>
+                <option value="norte">Distrito Norte ($5.60 por kWh)</option>
+            </select><br><br>
+
+            <label for="kwh">Cantidad de kWh del Mes:</label><br>
+            <input oninput="changeKwh()" type="number" id="kwh" name="kwh" required><br>
+
+            <input type="button" id="submitBoton" value="Calcular Factura" onclick="validarDatos()" disabled="true">
+        </form>
+    </div>
+</body>
+<script src="index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</html>
