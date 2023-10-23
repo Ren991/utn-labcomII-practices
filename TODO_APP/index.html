@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO App</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dL
+JgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="js/index.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>TODO App</h1>
+        <h3>Agregar tarea</h3>
+        <ul>
+            <li class="add-new-mode">
+                <input id="new-task" type="text">
+                <button class="add" id="add-button" onclick="agregarActividad()">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/></svg>
+                </button>
+            </li>
+        </ul>
+        <p>
+        </p>
+        <h3>Hacer</h3>
+        <ul id="incomplete-tasks">
+           <!--  <li>
+                <input type="checkbox">
+                <label>Pagar cuentas</label>
+                <input type="text">
+                <button class="edit">
+                    <i class="fas fa-pen"></i>
+                </button>
+                <button class="delete"><i class="fas fa-trash-alt"></i></button>
+            </li>
+            <li class="edit-mode">
+                <input type="checkbox">
+                <label>Ir al super</label>
+                <input type="text" value="Ir al super">
+                <button class="edit">
+                    <i class="fas fa-pen"></i>
+                </button>
+                <button class="delete"><i class="fas fa-trash-alt"></i></button>
+            </li> -->
+        </ul>
+        <h3>Completado</h3>
+        <ul id="completed-tasks">
+            <li>
+                <input type="checkbox" checked>
+                <label>Dentista</label>
+                <input type="text">
+                <button class="edit">
+                    <i class="fas fa-pen"></i>
+                </button>
+                <button class="delete"><i class="fas fa-trash-alt"></i></button>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
