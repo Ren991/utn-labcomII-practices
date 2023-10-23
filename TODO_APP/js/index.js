@@ -49,16 +49,15 @@ function editarTarea(index) {
         },
         showCancelButton: true,
         confirmButtonText: 'Guardar',
-        customClass: {  // Aplica estilos CSS personalizados
-            confirmButton: 'swal-confirm-button', // Clase para el botón "Guardar"
-            cancelButton: 'swal-cancel-button' // Clase para el botón "Cancelar"
+        customClass: {  
+            confirmButton: 'swal-confirm-button', 
+            cancelButton: 'swal-cancel-button' 
         },
         showLoaderOnConfirm: true,
         preConfirm: (nuevaTarea) => {
-            if (nuevaTarea) {
-                // Reemplaza el valor de la tarea con el nuevo texto
+            if (nuevaTarea) {                
                 tareasACompletar[index] = nuevaTarea;
-                actividadesPorHacer(); // Actualiza la lista de tareas por hacer
+                actividadesPorHacer(); 
             }
         }
     });
